@@ -34,7 +34,7 @@ public class Inspector {
     
     //Inspector enters vehicle’s license number.
     System.out.println("please input the license number: ");
-    RegNoDTO regNo = new RegNoDTO("ABC123"); //
+    RegNoDTO regNo = new RegNoDTO("ABC299"); //
     
     //Program tells cost for inspection.
     InspectionCostDTO inspectionCost= control.enterRegNo(regNo);

@@ -18,5 +18,11 @@ public class Printer {
     {  }
     
     public void printResult(InspectionResultsRegistry inspectionResults)
-    {}
+    {
+        for (InspectionsDTO inspection : inspectionResults.getInspections()) 
+        {
+               System.out.println(inspection.getInspectionName() +": "+ inspection.getInspectionResult());
+        }
+    }
 }
+        
