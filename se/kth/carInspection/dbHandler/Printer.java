@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package se.kth.carInspection.dbHandler;
+import java.util.ArrayList;
 import se.kth.carInspection.model.Receipt;
 /**
  *
@@ -17,9 +18,9 @@ public class Printer {
     public void printReceipt(Receipt receipt) 
     {  }
     
-    public void printResult(InspectionResultsRegistry inspectionResults)
+    public void printResult(InspectionResultsRegistry InspectionResults)
     {
-        for (InspectionsDTO inspection : inspectionResults.getInspections()) 
+        for (InspectionsDTO inspection : InspectionResults.getInspections()) 
         {
                System.out.println(inspection.getInspectionName() +": "+ inspection.getInspectionResult());
         }

@@ -37,14 +37,24 @@ public class Controller {
         return creator.getInspectionCostRegistry().getCost(regNo);
                  
     }
-    public ArrayList<InspectionsDTO> getInspections(RegNoDTO regNo)
+    
+    //Program tells inspector what to inspect on customer’s vehicle.
+    public InspectionResultsRegistry getInspections(RegNoDTO regNo)
     {
-        return creator.getInspectionResultsRegistry().getInspections();
+        return creator.getInspectionResultsRegistry();
+        
     }  
     
-    public void Inspect(ArrayList<InspectionsDTO> InspectionResults)
+    //Program stores inspection results.
+    public void Inspect(InspectionResultsRegistry InspectionResults)
     {
      creator.getInspectionResultsRegistry().setInspectionsResults(InspectionResults);
     }
     
+    //Program prints inspection results.
+    public void printsResults(InspectionResultsRegistry InspectionResults ) 
+    {    
+        printer.printResult(InspectionResults);
+    
+    }
 }

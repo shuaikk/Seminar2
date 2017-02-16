@@ -30,7 +30,7 @@ public class InspectionCostDTO {
     //Judge if it is the input vehicle’s license number.
     boolean matches(RegNoDTO regNo)
     {   
-        if (this.regNo == regNo)
+        if (this.regNo.getRegNo().equals(regNo.getRegNo()))
             {return true;}
         else 
             {return false;}
